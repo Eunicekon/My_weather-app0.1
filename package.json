@@ -1,0 +1,21 @@
+{
+  "name": "my-weather-app101",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": " npm run-script build && node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:js": " browserify ./app.js -o ./public/js/app.js && browserify ./client/js/main.js -o ./public/js/main.js",
+    "build": "npm run build:js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "request": "^2.88.0"
+  }
+}

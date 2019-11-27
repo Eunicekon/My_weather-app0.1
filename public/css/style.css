@@ -1,0 +1,20 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-image: url("../images/photo-1476673160081-cf065607f449.jpg");
+    background-size: cover;                      
+    background-repeat: no-repeat;
+  }
+  .container {
+    margin: auto;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    padding: 10px;
+    display: flex;
+    width: 33% 33%;
+    height: 33% 33%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgba(241, 42, 15, 0.575);
+    /* background-color: linen; */
+  }
