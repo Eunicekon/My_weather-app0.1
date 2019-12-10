@@ -1,11 +1,14 @@
 const express = require('express');
 const app = express();
-// const port = 3000
 const bodyParser = require('body-parser');
 const request = require ('request');
 const hbs = require( 'express-handlebars');
-const apiKey = "c64dc48bc7f189b4e3fd811a603cb1c9";
+const api_Key = process.env.api_key;
+//
+
 require('dotenv').config();
+
+
 
 
 app.use(express.static('public'));
@@ -23,16 +26,15 @@ app.engine( 'hbs', hbs( {
 app.get('/', function (req, res) {
     res.render('index', {weather: null, error: null});
   });
+app.get('/', (req, res) => {
+    res.render(process.env.api_key);
+})
 
 
   
   app.post('/', function (req, res) {
     let city = req.body.city;
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`
-
-    // creating a working icon using the icon code from the API
-
-    //let icon = "https://openweathermap.org/img/w/" + data.weather[0].icon;
+    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${api_Key}`
 
     request(url, function (err, response, body) {
       console.log(document);
@@ -51,4 +53,4 @@ app.get('/', function (req, res) {
 
   })
   
-app.listen(port, () => console.log(`Eunice your weather-app is listening on port ${port}!`));
+app.listen(port, () => console.log(`App is listening on port ${port}!`));

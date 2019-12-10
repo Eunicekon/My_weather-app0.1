@@ -81744,8 +81744,8 @@ function buildDropdown() {
 }
 
 function fetchWeather(city) {
-  var apiKey = "c64dc48bc7f189b4e3fd811a603cb1c9";
-  var url = "http://api.openweathermap.org/data/2.5/weather?q=".concat(city, "&units=imperial&appid=").concat(apikey);
+  var api_Key = "c64dc48bc7f189b4e3fd811a603cb1c9";
+  var url = "http://api.openweathermap.org/data/2.5/weather?q=".concat(city, "&units=imperial&appid=").concat(api_key);
   request(url, function (err, response, body) {
     if (err) console.log('Error: ', err);
     var weatherData = JSON.parse(body);
@@ -81787,7 +81787,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53488" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63987" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
