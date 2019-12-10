@@ -1,15 +1,23 @@
 const express = require('express');
 const app = express();
-const port = 3000
+// const port = 3000
 const bodyParser = require('body-parser');
 const request = require ('request');
-const API_KEY = process.env.API_KEY;
+const hbs = require( 'express-handlebars');
+const apiKey = "c64dc48bc7f189b4e3fd811a603cb1c9";
 require('dotenv').config();
 
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.set('view engine', 'ejs');
+app.set('view engine', 'hbs');
+app.engine( 'hbs', hbs( {
+  extname: 'hbs',
+  defaultView: 'index',
+  defaultLayout: null,
+  partialsDir: path.join(__dirname, 'views/partials'),
+  layoutsDir: path.join(__dirname, 'views/layouts')
+}));
 
 
 app.get('/', function (req, res) {
@@ -20,7 +28,7 @@ app.get('/', function (req, res) {
   
   app.post('/', function (req, res) {
     let city = req.body.city;
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${process.env.API_KEY}`
+    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`
 
     // creating a working icon using the icon code from the API
 

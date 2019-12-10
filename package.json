@@ -4,10 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": " npm run-script build && node app.js",
+    "start": "parcel ./views/index.hbs",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:js": " browserify ./app.js -o ./public/js/app.js && browserify ./client/js/main.js -o ./public/js/main.js",
-    "build": "npm run build:js"
+    "build": " parcel build ./views/index.hbs"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +15,9 @@
     "dotenv": "^8.2.0",
     "ejs": "^2.7.1",
     "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-handlebars": "^0.4.4",
     "request": "^2.88.0"
   }
 }

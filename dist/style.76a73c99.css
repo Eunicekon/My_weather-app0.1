@@ -1,0 +1,32 @@
+ body {
+    font-family: 'Open Sans', sans-serif;
+    background-image: url("/photo-1476673160081-cf065607f449.51873dd1.jpg");
+    background-size: cover;                      
+    background-repeat: no-repeat;
+  }
+
+  .container {
+    margin: auto;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    width: 33% 33%;
+    height: 33% 33%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: grey;
+  }
+
+.box {
+  display: inline-block;
+  color: grey;
+  text-decoration: none;
+  padding: 1em 2em;
+  border-radius: 5px;
+  margin: .5em 0;  
+}
+
+/*# sourceMappingURL=/style.76a73c99.css.map */
