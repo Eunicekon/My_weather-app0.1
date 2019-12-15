@@ -81694,14 +81694,17 @@ Object.defineProperty(request, 'debug', {
 var request = require('request');
 
 var cities = [{
+  name: 'Dubai',
+  value: 'Dubai'
+}, {
   name: 'London',
   value: 'London'
 }, {
   name: 'Paris',
   value: 'Paris'
 }, {
-  name: 'Milan',
-  value: 'Milan'
+  name: 'Brisbane',
+  value: 'Brisbane'
 }, {
   name: 'Berlin',
   value: 'Berlin'
@@ -81709,11 +81712,11 @@ var cities = [{
   name: 'Barcelona',
   value: 'Barcelona'
 }, {
-  name: 'Chapel Row',
-  value: 'Chapel Row'
+  name: 'New York',
+  value: 'New York'
 }, {
-  name: 'Como',
-  value: 'Como'
+  name: 'Accra',
+  value: 'Accra'
 }, {
   name: 'Cape Town',
   value: 'Cape Town'
@@ -81787,7 +81790,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51576" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56459" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

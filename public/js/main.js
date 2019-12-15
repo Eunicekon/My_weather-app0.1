@@ -1,8 +1,8 @@
 const request = require('request');
 
-const cities = [{name: 'London', value: 'London'}, {name: 'Paris', value: 'Paris'},
-{name: 'Milan', value: 'Milan'}, {name: 'Berlin', value: 'Berlin'}, {name: 'Barcelona', value: 'Barcelona'}, 
-{name: 'Chapel Row', value: 'Chapel Row'}, {name: 'Como', value: 'Como'}, {name: 'Cape Town', value: 'Cape Town'}];
+const cities = [{name: 'Dubai', value: 'Dubai'}, {name: 'London', value: 'London'}, {name: 'Paris', value: 'Paris'},
+{name: 'Brisbane', value: 'Brisbane'}, {name: 'Berlin', value: 'Berlin'}, {name: 'Barcelona', value: 'Barcelona'}, 
+{name: 'New York', value: 'New York'}, {name: 'Accra', value: 'Accra'}, {name: 'Cape Town', value: 'Cape Town'}];
     
 
 function buildDropdown(){
