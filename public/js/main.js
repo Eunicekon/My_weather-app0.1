@@ -32,8 +32,8 @@ function buildDropdown(){
 }
 
 function fetchWeather(city) {
-    const api_Key = process.env.api_key;
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${api_key}`;
+    const api_Key = process.env.api_Key;
+    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${api_Key}`;
     request(url, function (err, response, body) {
       if(err) console.log('Error: ', err);
       const weatherData = JSON.parse(body)

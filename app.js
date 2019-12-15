@@ -3,13 +3,9 @@ const app = express();
 const bodyParser = require('body-parser');
 const request = require ('request');
 const hbs = require( 'express-handlebars');
-const api_Key = process.env.api_key;
-//
+const api_Key = process.env.api_Key;
 
-require('dotenv').config();
-
-
-
+require('dotenv').config({path: __dirname + '/.env'});
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -26,9 +22,9 @@ app.engine( 'hbs', hbs( {
 app.get('/', function (req, res) {
     res.render('index', {weather: null, error: null});
   });
-app.get('/', (req, res) => {
-    res.render(process.env.api_key);
-})
+// app.get('/', (req, res) => {
+//     res.render(process.env.api_key);
+// })
 
 
   
