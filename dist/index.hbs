@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Eunice_WeatherApp</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/style.css">
   </head>
   <body> 
     <div class="container">
@@ -18,16 +18,16 @@
               <p id="selected_city"></p>
         </form>
 
-        <% if(weather !== null){ %>
-            <p><%= weather %></p>
-          <% } %>
-          <% if(error !== null){ %>
-            <p><%= error %></p>
-          <% } %>
+        {{#if weather}}
+          <p>{{weather}}</p>
+        {{/if}}
+        {{#if errorl}}
+          <p>{{error}}</p>
+        {{/if}}
 
         <div id="temperature"></div> 
         </div>
     </div>
-    <script src="./js/main.js" ></script>
+    <script src="../public/js/main.js" ></script>
   </body>
 </html>
