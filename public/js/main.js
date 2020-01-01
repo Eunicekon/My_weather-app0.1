@@ -3,6 +3,38 @@ const request = require('request');
 const cities = [{name: 'Dubai', value: 'Dubai'}, {name: 'London', value: 'London'}, {name: 'Paris', value: 'Paris'},
 {name: 'Brisbane', value: 'Brisbane'}, {name: 'Berlin', value: 'Berlin'}, {name: 'Barcelona', value: 'Barcelona'}, 
 {name: 'New York', value: 'New York'}, {name: 'Accra', value: 'Accra'}, {name: 'Cape Town', value: 'Cape Town'}];
+
+
+//get modal element
+var modal = document.getElementById('simpleModal');
+//get open modal button
+var modalBtn = document.getElementById('modalBtn');
+//get close button
+var closeBtn = document.getElementsByClassName('closeBtn');
+
+//Listen for open click
+modalBtn.addEventListener('click', openModal);
+//Listen for close click
+closeBtn.addEventListener('click', closeModal);
+//Listen for outside click
+window.addEventListener('click', outsideClick);
+
+//function to open modal
+function openModal(){
+    modal.style.display = 'block';
+}
+
+//function to close modal
+function closeModal(){
+    modal.style.display = 'none';
+}
+
+//function to close modal if outside click
+function outsideClick(e){
+    if(e.target == modal){
+    modal.style.display = 'none';
+    }
+}
     
 
 function buildDropdown(){
@@ -46,9 +78,6 @@ function fetchWeather(city) {
       get_icon.src= icon;
     });
     
-    
-
 }
 
 buildDropdown();
-
