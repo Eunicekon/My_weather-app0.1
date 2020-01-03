@@ -81740,7 +81740,7 @@ function buildDropdown() {
     var city = e.target.value; // Write a function which prints the selected city on the page
 
     var selected_city_element = document.getElementById("selected_city");
-    selected_city_element.textContent = "Selected City is ".concat(city);
+    selected_city_element.textContent = "Selected City is: ".concat(city);
     console.log(city);
     fetchWeather(city);
   };
@@ -81753,44 +81753,43 @@ function fetchWeather(city) {
     if (err) console.log('Error: ', err);
     var weatherData = JSON.parse(body);
     var get_temp = document.getElementById("temperature");
-    get_temp.textContent = "It's currently ".concat(weatherData.main.temp, " \xB0F");
+    get_temp.textContent = "It's currently: ".concat(weatherData.main.temp, " \xB0F");
+    console.log(JSON.parse(body));
+    var get_humidity = document.getElementById("humidity");
+    get_humidity.textContent = "Humidity: ".concat(weatherData.main.humidity);
+    console.log(JSON.parse(body));
+    var get_speed = document.getElementById("speed");
+    get_speed.textContent = "Wind: ".concat(weatherData.wind.speed);
+    console.log(JSON.parse(body));
+    var get_pressure = document.getElementById("pressure");
+    get_pressure.textContent = "Pressure: ".concat(weatherData.main.pressure);
     console.log(JSON.parse(body));
     var icon = "https://openweathermap.org/img/w/".concat(weatherData.weather[0].icon, ".png");
     var get_icon = document.getElementById("weatherIcon");
     get_icon.src = icon;
   });
-} //get modal element
-
-
-var modal = document.getElementById('simpleModal'); //get open modal button
-
-var modalBtn = document.getElementById('modalBtn'); //get close button
-
-var closeBtn = document.getElementsByClassName('closeBtn'); //Listen for open click
-
-modalBtn.addEventListener('click', openModal); //Listen for close click
-
-closeBtn.addEventListener('click', closeModal); //Listen for outside click
-
-window.addEventListener('click', outsideClick); //function to open modal
-
-function openModal() {
-  modal.style.display = 'block';
-} //function to close modal
-
-
-function closeModal() {
-  modal.style.display = 'none';
-} //function to close modal if outside click
-
-
-function outsideClick(e) {
-  if (e.target == modal) {
-    modal.style.display = 'none';
-  }
 }
 
-buildDropdown();
+buildDropdown(); // //get modal element
+// var modal = document.getElementById('simpleModal');
+// var modalBtn = document.getElementById('modalBtn');
+// var closeBtn = document.getElementsByClassName('closeBtn');
+// //Listen for open click
+// modalBtn.addEventListener('click', openModal);
+// closeBtn.addEventListener('click', closeModal);
+// window.addEventListener('click', outsideClick);
+// //function to open modal
+// function openModal(){
+//     modal.style.display = 'block';
+// }
+// function closeModal(){
+//     modal.style.display = 'none';
+// }
+// function outsideClick(e){
+//     if(e.target == modal){
+//     modal.style.display = 'none';
+//     }
+// }
 },{"request":"../node_modules/request/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -81819,7 +81818,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64614" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52790" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

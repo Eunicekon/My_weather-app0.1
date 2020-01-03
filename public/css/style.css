@@ -45,9 +45,9 @@
 } 
 
 .button {
-  background: coral;
+  background: #ffa600;
   padding: 1em 2em;
-  color: #fff;
+  color: rgb(129, 123, 123);
   border: 0;
 }
 

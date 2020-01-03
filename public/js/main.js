@@ -6,7 +6,6 @@ const cities = [{name: 'Dubai', value: 'Dubai'}, {name: 'London', value: 'London
 
 
 
-
 function buildDropdown(){
     const selectElement = document.getElementById("select");
     console.log(document);
@@ -27,7 +26,7 @@ function buildDropdown(){
         const city = e.target.value;
         // Write a function which prints the selected city on the page
         const selected_city_element = document.getElementById("selected_city");
-        selected_city_element.textContent = `Selected City is ${city}`;
+        selected_city_element.textContent = `Selected City is: ${city}`;
         console.log(city);
         fetchWeather(city);
     }
@@ -41,44 +40,49 @@ function fetchWeather(city) {
       const weatherData = JSON.parse(body)
 
       const get_temp = document.getElementById("temperature");
-      get_temp.textContent = `It's currently ${weatherData.main.temp} °F`  
+      get_temp.textContent = `It's currently: ${weatherData.main.temp} °F`  
       console.log(JSON.parse(body));
+
+      const get_humidity = document.getElementById("humidity");
+      get_humidity.textContent = `Humidity: ${weatherData.main.humidity}`
+      console.log(JSON.parse(body));
+
+      const get_speed = document.getElementById("speed");
+      get_speed.textContent = `Wind: ${weatherData.wind.speed}`
+      console.log(JSON.parse(body));
+
+      const get_pressure = document.getElementById("pressure");
+      get_pressure.textContent = `Pressure: ${weatherData.main.pressure}`
+      console.log(JSON.parse(body));
+
       const icon = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
       const get_icon = document.getElementById("weatherIcon") ;
       get_icon.src= icon;
-    });
-    
+
+    });     
 }
 
 buildDropdown();
 
-//get modal element
-var modal = document.getElementById('simpleModal');
-//get open modal button
-var modalBtn = document.getElementById('modalBtn');
-//get close button
-var closeBtn = document.getElementsByClassName('closeBtn');
+// //get modal element
+// var modal = document.getElementById('simpleModal');
+// var modalBtn = document.getElementById('modalBtn');
+// var closeBtn = document.getElementsByClassName('closeBtn');
 
-//Listen for open click
-modalBtn.addEventListener('click', openModal);
-//Listen for close click
-closeBtn.addEventListener('click', closeModal);
-//Listen for outside click
-window.addEventListener('click', outsideClick);
+// //Listen for open click
+// modalBtn.addEventListener('click', openModal);
+// closeBtn.addEventListener('click', closeModal);
+// window.addEventListener('click', outsideClick);
 
-//function to open modal
-function openModal(){
-    modal.style.display = 'block';
-}
-
-//function to close modal
-function closeModal(){
-    modal.style.display = 'none';
-}
-
-//function to close modal if outside click
-function outsideClick(e){
-    if(e.target == modal){
-    modal.style.display = 'none';
-    }
-}
+// //function to open modal
+// function openModal(){
+//     modal.style.display = 'block';
+// }
+// function closeModal(){
+//     modal.style.display = 'none';
+// }
+// function outsideClick(e){
+//     if(e.target == modal){
+//     modal.style.display = 'none';
+//     }
+// }
