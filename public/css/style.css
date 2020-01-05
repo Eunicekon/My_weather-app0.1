@@ -3,6 +3,7 @@
     background-image: url("../images/photo-1476673160081-cf065607f449.jpg");
     background-size: cover;                      
     background-repeat: no-repeat;
+    overflow: auto;
   }
 
   .weatherIcon {
@@ -45,7 +46,7 @@
 } 
 
 .button {
-  background: #ffa600;
+  background: white;
   padding: 1em 2em;
   color: rgb(129, 123, 123);
   border: 0;

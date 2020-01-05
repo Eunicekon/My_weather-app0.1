@@ -81770,26 +81770,29 @@ function fetchWeather(city) {
   });
 }
 
-buildDropdown(); // //get modal element
-// var modal = document.getElementById('simpleModal');
-// var modalBtn = document.getElementById('modalBtn');
-// var closeBtn = document.getElementsByClassName('closeBtn');
-// //Listen for open click
-// modalBtn.addEventListener('click', openModal);
-// closeBtn.addEventListener('click', closeModal);
-// window.addEventListener('click', outsideClick);
-// //function to open modal
-// function openModal(){
-//     modal.style.display = 'block';
-// }
-// function closeModal(){
-//     modal.style.display = 'none';
-// }
-// function outsideClick(e){
-//     if(e.target == modal){
-//     modal.style.display = 'none';
-//     }
-// }
+buildDropdown(); //get modal element
+
+var modal = document.getElementById('simpleModal');
+var modalBtn = document.getElementById('modalBtn');
+var closeBtn = document.getElementsByClassName('closeBtn'); //Listen for open click
+
+modalBtn.addEventListener('click', openModal);
+closeBtn.addEventListener('click', closeModal);
+window.addEventListener('click', outsideClick); //function to open modal
+
+function openModal() {
+  modal.style.display = 'block';
+}
+
+function closeModal() {
+  modal.style.display = 'none';
+}
+
+function outsideClick(e) {
+  if (e.target == modal) {
+    modal.style.display = 'none';
+  }
+}
 },{"request":"../node_modules/request/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -81818,7 +81821,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52790" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61097" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
