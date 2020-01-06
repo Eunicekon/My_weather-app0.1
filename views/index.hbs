@@ -37,14 +37,14 @@
               <div class="modal-content">
                 <div class="modal-header">
                          <span class="closeBtn">&times;</span>
-                         <h2>This is a weather app</h2>
+                         <h2></h2>
                       </div>
-                      <div class="modal-body">
+                      {{!-- <div class="modal-body">
                          <p>Weather Today</p>
-                         <p>I am under construction... <img src="https://www.dictionary.com/e/wp-content/uploads/2018/04/under-construction.jpg" alt="contruction" width="100" height= "70"></p>
+                         <p>I am under construction... <img src="https://www.dictionary.com/e/wp-content/uploads/2018/04/under-construction.jpg" alt="contruction" width="100" height= "70"></p> --}}
                                <div class="container">
-      <div class="box"> 
-        <form action="/" method="post">
+                  <div class="box"> 
+                    <form action="/" method="post">
               <div class="weatherIcon">
                   <span><img id = "weatherIcon" src="https://image.flaticon.com/icons/svg/1684/1684375.svg" alt="Icon" width="100" height= "70"></span>
               <div>
@@ -56,7 +56,6 @@
               <div id="speed"></div>
               <div id="humidity"></div>
               <div id="pressure"></div>
-
         </form>
         {{#if weather}}
           <p>{{weather}}</p>
@@ -66,13 +65,14 @@
         {{/if}}      
         </div>
       </div>
-                      </div>
-                      <div class="modal-footer">
-                          <h3>Search your City</h3>
-                      </div>
-                  </div>
-                </div>
-              </div>
+          </div>
+            {{!-- <div class="modal-footer">
+                <button>button</button>
+                <button>button</button>
+            </div> --}}
+      </div>
+    </div>
+  </div>
 
     <script src="../public/js/main.js" ></script>
   </body>
