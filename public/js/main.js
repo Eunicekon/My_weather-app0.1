@@ -66,13 +66,13 @@ buildDropdown();
 
 
 //get modal element
-var modal = document.getElementById('simpleModal');
-var modalBtn = document.getElementById('modalBtn');
-var closeBtn = document.getElementsByClassName('closeBtn');
+const modal = document.getElementById('simpleModal');
+const modalBtn = document.getElementById('modalBtn');
+const closeBtn = document.getElementsById('closeBtn');
 
 //Listen for open click
 modalBtn.addEventListener('click', openModal);
-closeBtn.addEventListener('click', closeModal);
+closeBtn.addEventListener('click', closeModal[0]);
 window.addEventListener('click', outsideClick);
 
 //function to open modal

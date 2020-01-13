@@ -6,74 +6,51 @@
     <link rel="stylesheet" type="text/css" href="../public/css/style.css">
   </head>
   <body> 
-      {{!-- <div class="container">
-      <div class="box"> 
-        <form action="/" method="post">
-              <div class="weatherIcon">
-                  <span><img id = "weatherIcon" src="https://image.flaticon.com/icons/svg/1684/1684375.svg" alt="Icon" width="100" height= "70"></span>
-              <div>
-                  <select id = "select" name = "city" type="text" class="ghost-button" required></select></div>
-                  
-              </div>
-              <div><p id="selected_city"></p></div>
-              <div id="temperature"></div>
-              <div id="speed"></div>
-              <div id="humidity"></div>
-              <div id="pressure"></div>
-
-        </form>
-        {{#if weather}}
-          <p>{{weather}}</p>
-        {{/if}}
-        {{#if errorl}}
-          <p>{{error}}</p>
-        {{/if}}      
-        </div>
-      </div> --}}
-
       <div>
-          <div><button id="modalBtn" class="button">Click here</button></div>
-            <div id="simpleModal" class="modal">
-              <div class="modal-content">
-                <div class="modal-header">
-                         <span class="closeBtn">&times;</span>
-                         <h2></h2>
-                      </div>
-                      {{!-- <div class="modal-body">
-                         <p>Weather Today</p>
-                         <p>I am under construction... <img src="https://www.dictionary.com/e/wp-content/uploads/2018/04/under-construction.jpg" alt="contruction" width="100" height= "70"></p> --}}
-                               <div class="container">
-                  <div class="box"> 
-                    <form action="/" method="post">
-              <div class="weatherIcon">
-                  <span><img id = "weatherIcon" src="https://image.flaticon.com/icons/svg/1684/1684375.svg" alt="Icon" width="100" height= "70"></span>
-              <div>
-                  <select id = "select" name = "city" type="text" class="ghost-button" required></select></div>
-                  
-              </div>
-              <div><p id="selected_city"></p></div>
-              <div id="temperature"></div>
-              <div id="speed"></div>
-              <div id="humidity"></div>
-              <div id="pressure"></div>
-        </form>
-        {{#if weather}}
-          <p>{{weather}}</p>
-        {{/if}}
-        {{#if errorl}}
-          <p>{{error}}</p>
-        {{/if}}      
-        </div>
-      </div>
+          <div>
+            <button id="modalBtn" class="button">
+              Click here
+            </button>
           </div>
-            {{!-- <div class="modal-footer">
-                <button>button</button>
-                <button>button</button>
-            </div> --}}
+          <div id="simpleModal" class="modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <span id="closeBtn">
+                    &times;
+                  </span>
+              </div>
+          <div class="container">
+             <div class="box"> 
+              <form action="/" method="post">
+                <div class="weatherIcon">
+                    <span>
+                      <img id = "weatherIcon" src="https://image.flaticon.com/icons/svg/1684/1684375.svg" alt="Icon" width="100" height= "70">
+                    </span>
+                  <div>
+                    <select id = "select" name = "city" type="text" class="ghost-button" required>
+                    </select>
+                  </div>              
+                </div>
+                <div>
+                  <p id="selected_city"></p>
+                </div>
+                <div id="temperature"></div>
+                <div id="speed"></div>
+                <div id="humidity"></div>
+                <div id="pressure"></div>
+              </form>
+                  {{#if weather}}
+                    <p>{{weather}}</p>
+                  {{/if}}
+                  {{#if errorl}}
+                    <p>{{error}}</p>
+                  {{/if}}      
+            </div>
+          </div>
+          </div>
       </div>
     </div>
   </div>
-
     <script src="../public/js/main.js" ></script>
   </body>
 </html>
