@@ -54,7 +54,7 @@ function fetchWeather(city) {
       console.log(JSON.parse(body));
 
       const icon = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
-      const get_icon = document.getElementById("weatherIcon") ;
+      const get_icon = document.getElementById("weatherIcon");
       get_icon.src= icon;
     });     
 }
