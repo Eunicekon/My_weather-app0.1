@@ -45,7 +45,7 @@
   margin: .5em 0;  
 } 
 
-.button {
+.ghost-button {
   background: white;
   padding: 1em 2em;
   color: rgb(129, 123, 123);
