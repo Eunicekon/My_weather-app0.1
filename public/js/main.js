@@ -65,13 +65,13 @@ function fetchWeather(city) {
 buildDropdown();
 
 
-//get modal element
+//getting my modal element
 const modal = document.getElementById('simpleModal');
-const modalBtn = document.getElementById('modalBtn');
-const closeBtn = document.getElementsById('closeBtn');
+// const select = document.getElementById('select');
+const closeBtn = document.getElementById('closeBtn');
 
-//Listen for open click
-modalBtn.addEventListener('click', openModal);
+//Listen for the open click
+select.addEventListener('click', openModal);
 closeBtn.addEventListener('click', closeModal[0]);
 window.addEventListener('click', outsideClick);
 
