@@ -5,7 +5,6 @@
     background-repeat: no-repeat;
     overflow: auto;
   }
-
   .weatherIcon {
     margin: auto;
     margin-top: 15%;
@@ -20,7 +19,6 @@
     text-align: center;
     color: grey;
   }
-
   .container {
     margin: auto;
     margin-top: 15%;
@@ -35,7 +33,6 @@
     text-align: center;
     color: grey;
   }
-
  .box {
   display: inline-block;
   color: grey;
@@ -44,18 +41,15 @@
   border-radius: 5px;
   margin: .5em 0;  
 } 
-
 .ghost-button {
   background: white;
   padding: 1em 2em;
   color: rgb(129, 123, 123);
   border: 0;
 }
-
 .button:hover {
-  background: #333;
+  background: rgb(161, 134, 134);
 }
-
 .modal {
   display: none;
   position: fixed;
@@ -66,22 +60,19 @@
   width: 100%;
   overflow: auto;
 }
-
+.closeBtn {
+  color: rgb(167, 158, 158);
+  float: left;
+  font-size: 30px;
+}
+.closeBtn:hover,.closeBtn:focus {
+  cursor: grab;
+  text-decoration: ivory;
+}
 .modal-content {
-  background-color: #f4f4f4;
+  background-color: ivory;
   margin: 20% auto;
   padding: 20px;
   width: 70%;
   box-shadow: grey;
-}
-
-.closeBtn {
-  color: #ccc;
-  float: right;
-  font-size: 30px;
-}
-
-.closeBtn:hover,.closeBtn:focus {
-  cursor: pointer;
-  text-decoration: none;
 }
