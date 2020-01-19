@@ -4,8 +4,6 @@ const cities = [{name: 'Dubai', value: 'Dubai'}, {name: 'London', value: 'London
 {name: 'Brisbane', value: 'Brisbane'}, {name: 'Berlin', value: 'Berlin'}, {name: 'Barcelona', value: 'Barcelona'}, 
 {name: 'New York', value: 'New York'}, {name: 'Accra', value: 'Accra'}, {name: 'Cape Town', value: 'Cape Town'}];
 
-
-
 function buildDropdown(){
     const selectElement = document.getElementById("select");
     console.log(document);
@@ -58,24 +56,17 @@ function fetchWeather(city) {
       const icon = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
       const get_icon = document.getElementById("weatherIcon") ;
       get_icon.src= icon;
-
     });     
 }
-
 buildDropdown();
 
-
-//getting my modal element
-const modal = document.getElementById('simpleModal');
-// const select = document.getElementById('select');
+const modal = document.getElementById('firstModal');
 const closeBtn = document.getElementById('closeBtn');
 
-//Listen for the open click
 select.addEventListener('click', openModal);
 closeBtn.addEventListener('click', closeModal[0]);
 window.addEventListener('click', outsideClick);
 
-//function to open modal
 function openModal(){
     modal.style.display = 'block';
 }
