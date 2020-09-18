@@ -22,12 +22,7 @@ app.engine( 'hbs', hbs( {
 app.get('/', function (req, res) {
     res.render('index', {weather: null, error: null});
   });
-// app.get('/', (req, res) => {
-//     res.render(process.env.api_key);
-// })
 
-
-  
   app.post('/', function (req, res) {
     let city = req.body.city;
     let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${api_Key}`
