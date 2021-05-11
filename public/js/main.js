@@ -1,10 +1,9 @@
-const request = require('request');
 
 const cities = [{name: 'Dubai', value: 'Dubai'}, {name: 'London', value: 'London'}, {name: 'Paris', value: 'Paris'},
 {name: 'Brisbane', value: 'Brisbane'}, {name: 'Berlin', value: 'Berlin'}, {name: 'Barcelona', value: 'Barcelona'}, 
 {name: 'New York', value: 'New York'}, {name: 'Accra', value: 'Accra'}, {name: 'Cape Town', value: 'Cape Town'}];
 
-function buildDropdown(){
+module.exports.buildDropdown = () => {
     const selectElement = document.getElementById("select");
     console.log(document);
     
@@ -30,7 +29,7 @@ function buildDropdown(){
     }
 }
 
-function fetchWeather(city) {
+module.exports.fetchWeather = (city) => {
     const api_Key = process.env.api_Key;
     let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${api_Key}`;
     request(url, function (err, response, body) {
@@ -67,13 +66,13 @@ select.addEventListener('click', openModal);
 closeBtn.addEventListener('click', closeModal[0]);
 window.addEventListener('click', outsideClick);
 
-function openModal(){
+module.exports.openModal = () => {
     modal.style.display = 'block';
 }
-function closeModal(){
+module.exports.closeModal = () => {
     modal.style.display = 'none';
 }
-function outsideClick(e){
+module.exports.outsideClick = (e) => {
     if(e.target == modal){
     modal.style.display = 'none';
     }

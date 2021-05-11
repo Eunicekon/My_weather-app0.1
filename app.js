@@ -1,9 +1,10 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const request = require ('request');
 const hbs = require( 'express-handlebars');
 const api_Key = process.env.api_Key;
+const port = 3000;
+// const js = require('./public/js/main')
 
 require('dotenv').config({path: __dirname + '/.env'});
 
@@ -14,8 +15,6 @@ app.engine( 'hbs', hbs( {
   extname: 'hbs',
   defaultView: 'index',
   defaultLayout: null,
-  partialsDir: path.join(__dirname, 'views/partials'),
-  layoutsDir: path.join(__dirname, 'views/layouts')
 }));
 
 
